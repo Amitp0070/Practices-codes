@@ -1,0 +1,19 @@
+body{
+    background-color:dodgerblue;
+}
+.menu li{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+#nav {
+    width: 100%;
+    overflow:hidden;
+    transition: 0.4s;
+    position: relative;
+    top: 5;
+    background-color:rgb(68, 238, 68);
+}
+.menu li{
+    color: white;
+}

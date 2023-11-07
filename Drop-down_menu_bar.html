@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop-Down Menu_bar Design</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(static/images/image.jpg);
+    background-size: center;
+    background-position: center;
+    font-family: sans-serif;
+}
+.menu-bar{
+    background-color: rgba(45, 161, 244, 0.672);
+    text-align: center;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style: none;
+    color: white;
+}
+.menu-bar ul li{
+    width: 120px;
+    margin: 15px;
+    padding: 15px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+.active, .menu-bar ul li a:hover{
+    background-color: rgb(16, 5, 143);
+}
+.menu-bar .fa-solid{
+    margin-right: 8px;
+}
+.sub-menu-1{
+    display: none;
+}
+.menu-bar ul li:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    background-color:rgb(28, 83, 234) ;
+    margin-top: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted #fff;
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li:last-child{
+    border-bottom: none;
+}
+.menu-bar ul li:hover .sub-menu-1 ul li a:hover{
+    color:deeppink;
+}
+    </style>
+</head>
+<body>
+    <div class="menu-bar">
+    <ul>
+        <li class="active"><a href="#"><i class="fa-solid fa-house"></i>Home</a></li>
+        <li><a href="#"><i class="fa-solid fa-user"></i>About Us</a>
+            <div class="sub-menu-1">
+                <ul>
+                 <li><a href="#">Mission</a></li>
+                 <li><a href="#">Vision</a></li>
+                 <li><a href="#">Team</a></li>
+                </ul>
+               </div>
+            </li>
+        <li><a href="#"><i class="fa-solid fa-clone"></i>Services</a>
+            <div class="sub-menu-1">
+                <ul>
+                 <li><a href="#">Mission</a></li>
+                 <li><a href="#">Vision</a></li>
+                 <li><a href="#">Team</a></li>
+                </ul>
+               </div>
+            </li>
+        <li><a href="#"><i class="fa-solid fa-users"></i>Clients</a>
+            <div class="sub-menu-1">
+                <ul>
+                 <li><a href="#">Mission</a></li>
+                 <li><a href="#">Vision</a></li>
+                 <li><a href="#">Team</a></li>
+                </ul>
+               </div>
+            </li>
+        <li><a href="#"><i class="fa-solid fa-angellist"></i>Investors</a>
+            <div class="sub-menu-1">
+                <ul>
+                 <li><a href="#">Mission</a></li>
+                 <li><a href="#">Vision</a></li>
+                 <li><a href="#">Team</a></li>
+                </ul>
+               </div>
+            </li>
+        <li><a href="#"><i class="fa-solid fa-inr"></i>Pricing</a></li>
+        <li><a href="#"><i class="fa-solid fa-edit"></i>Training</a></li>
+        <li><a href="#"><i class="fa-solid fa-phone"></i>Contact</a></li>
+    </ul>
+    </div>
+</body>
+</html>

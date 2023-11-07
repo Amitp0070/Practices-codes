@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout example 2</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* reset */
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(18, 23, 40);
+            color: white;
+        }
+        section{
+             min-height: 90vh;
+             max-width: 90%;
+             margin-inline: auto;
+             padding-top: 3rem; 
+        }
+        header{
+            padding-top: 2rem;
+        }
+        .logo{
+            width: 3rem;
+            height: 3rem;
+            filter: invert(1);
+        }
+        .nav-link{
+            color: white;
+            text-decoration: none;
+            font-size: 3rem;
+            font-weight: bolder;
+            font-family: sans-serif;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .content{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            /* background-color: aquamarine; */
+            height: 100vh;
+        }
+        .hero{
+            flex-wrap: wrap;
+            align-items: center;
+            /* background-color: aqua;  */
+            /* display: grid; */
+            /* justify-items: center; */
+        }
+        .col{
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            /* background-color: aqua; */
+            justify-content: center;
+        }
+        .title-wrapper{
+            flex-grow: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        .btn-wrapper{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: flex-end;
+        }
+        .col h1{
+            font-size: 7rem;
+            font-family: sans-serif;
+            /* margin-top: 3rem; */
+            line-height: 1;
+             /* font-family: sans-serif; */
+            /* line-height: 1; */
+            /* color: rgb(139, 6, 255); */
+        }
+        .hero img{
+            /* object-fit: cover; */
+            border-radius: 5rem;
+            width: 750px;
+            height: 600px;
+            object-fit: cover;
+            box-shadow: -20px 5px 100px #00f;
+        }
+        .col button{
+            font-size: 1.6rem;
+            background-image: linear-gradient(90deg,#82058a,#ec1e3d);
+            border-radius: 3rem;
+            padding: 1.75rem;
+            width: 250px;
+            border: none;
+            /* margin-top: 7rem; */
+            font-weight: bolder;
+        }
+        .cont{
+            text-align: center;
+            height: 100%;
+            /* background-color: #ec1e3d; */
+        }
+        .cor{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            /* text-align: center; */
+            font-size: 4.8rem;
+            font-family: sans-serif;
+            line-height: 1;
+        }
+        h2 span{
+            color:#72029b;
+        }
+        .coc{
+            font-size: 1.5rem;
+            flex-direction: column;
+            justify-content: center;
+            /* text-align: center; */
+            line-height: 1.5;
+            margin-top: 5rem;
+            font-family: sans-serif;
+        }
+        .cell{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            align-items: center;
+            /* background-color: aquamarine; */
+            height: 100vh;
+        }
+        .pag{
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .cel{
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            flex-direction: column;
+            height: 700px;
+            /* background-color: aqua; */
+            justify-content: center;
+            font-family: sans-serif;
+        }
+        .tit-wrapper{
+            font-size: 4rem;
+            flex-grow: 2;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            color: #72029b;
+        }
+        .ptn-wrapper{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content:flex-start;
+            gap: 3rem;
+            font-size: 2rem;
+        }
+        .pag img{
+            /* object-fit: cover; */
+            border-radius: 3rem;
+            width: 700px;
+            height: 700px;
+            object-fit: cover;
+            align-items: center;
+            /* box-shadow: -20px 5px 100px #00f; */
+        }
+        .ke{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8rem; 
+            align-items: flex-start;
+            /* background-color: aquamarine; */
+            height: 100vh;
+            text-align: start;
+            height: 100%;
+        }
+        .ke-a img{
+            border-radius: 5rem;
+            width: 750px;
+            height: 600px;
+            object-fit: cover;
+        }
+        .te{
+            display: grid;
+            grid-template-rows: 25% 75%;
+            align-items: start;
+            font-family: sans-serif;
+            gap: rem;
+        }
+        .ke-b{
+            font-size: 3.5rem;
+            color: #72029b;
+            font-weight: bolder;
+        }
+        .tex-c{
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: flex-start;
+            gap: rem;
+            padding-top: 3rem;
+            font-size: 2rem;
+        } 
+        /* .lg{
+            color: white;
+            text-decoration: none;
+            font-size: 3rem;
+            font-weight: bolder;
+            font-family: sans-serif;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .log{
+            width: 3rem;
+            height: 3rem;
+            filter: invert(1);
+        } */
+        .log{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10rem;
+            align-items: start;
+
+        }
+        .navo{
+            color: white;
+            text-decoration: none;
+            font-size: 4rem;
+            font-weight: bolder;
+            font-family: sans-serif;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        .div {
+            font-size: 1.5rem;
+            font-family: sans-serif;
+            align-items: start;
+        }
+        h4{
+            margin-top: 3rem;
+        }
+        span{
+            color:#72029b;
+            font-size: 7rem;
+        }
+        .text-wrapper{
+            font-size: 2rem;
+        }
+        .fa-brands {
+            font-size: 3rem;
+            padding-top: 7rem;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <header>
+                <nav>
+                   <a href="#" class="nav-link">
+                    <img src="static/images/logo.png" alt="logo" class="logo">
+                    Internet
+                   </a>
+                </nav>
+            </header>
+            <div class="content">
+                <div class="col">
+                    <div class="title-wrapper">
+                        <h1>Always Stay Connected</h1>
+                    </div>
+                        <div class="btn-wrapper">
+                         <button>Learn More</button>
+                        </div>
+                </div>
+                <div class="col hero">
+                    <img src="static/images/int.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="cont">
+              <div class="cor">
+               <h2> <span>Internet</span> is a startup <br>looking to change the way people connect.</h2>
+              </div>
+             <div class="coc">
+              <h4>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus voluptas incidunt dicta aut maxime porro 
+                <br> fuga iste pariatur itaque sint, nemo aliquam impedit quo dolorem obcaecati libero iusto. Accusantium, non consequatur 
+                <br>libero  velit  nulla ipsa rem maiores! Accusamus dolor impedit numquam nesciunt repudiandae. Recusandae ab accusamus 
+                <br>minima officia beatae cum molestias quo, amet doloribus sequi ex nemo impedit vel, corrupti libero? Adipisci ullam error
+                <br>sed alias nobis laudantium accusamus nam odio optio facilis, reiciendis velit magni doloribus iste eaque dolorum 
+                <br>nulla tempore ad. Illum, tempore. Harum nostrum, nesciunt modi eum vitae mollitia! Aliquid iste et commodi quas.</h4>
+             </div>
+            </div>
+        </section>
+        <section>
+         <div class="cell">
+                <div class="cel">
+                    <div class="tit-wrapper">
+                       <h1>Connect to the Peoples</h1>
+                    </div>
+                    <div class="ptn-wrapper">
+                      <h4>Use the Internet and to connect with the people you kwon.</h4>
+                      <!-- <div class="tex-wrapper"> -->
+                        <h4>Internet can also connect you to people <br> outside your usual circle.</h4>
+                    <!-- </div> -->
+                    </div>
+                </div>
+            <div class="cel pag">
+             <img src="static/images/internet.webp" alt="">
+            </div>
+         </div>
+        </section>
+        <section>
+            <div class="ke">
+                <div class="ke-a">
+                  <img src="static/images/intern.jpg" alt="">
+                </div>
+                <div class="te">
+                    <div class="ke-b">
+                      <h1>Keep in Touch</h1>
+                    </div>
+                    <div class="tex-c">
+                      <h4>Internet's messaging system replaces text,call,and voicemail. </h4>
+                      <!-- <div class="tex-wrapper"> -->
+                      <h4> Our build-in forums will change the way you handle group interests and discussions.</h4>
+                    <!-- </div> -->
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="cell">
+                <div class="cel">
+                    <div class="tit-wrapper">
+                       <h1>Build Your Social Base</h1>
+                    </div>
+                    <div class="text-wrapper">
+                      <h4>Internet introduces you to ideas and spaces that may interest you.</h4>
+                      <!-- <div class="tex-wrapper"> -->
+                        <h4>You can use these space to meet new people, engage, and create connections.</h4>
+                    <!-- </div> -->
+                    </div>
+                </div>
+            <div class="cel pag">
+             <img src="static/images/internet.webp" alt="">
+            </div>
+         </div>
+        </section>
+        <section>
+            <div class="log">
+                <div class="navo">
+                   <img src="static/images/logo.png" alt="logo" class="logo">
+                   Internet
+                </div>
+                <div class="div">
+                 <h3><span>Connect</span></h3>
+                 <h4>123-456-789 <br>123 Anywhere St..Any City. ST 123456 <br>hello@reallygreatsite.com</h4>
+                 <a href=""><i class="fa-brands fa-instagram" style="color: #07efef;"></i></a>
+                 <a href=""><i class="fa-brands fa-linkedin" style="color: #0dd0f8;"></i></a>
+                 <a href=""><i class="fa-brands fa-facebook"  style="color: #0dd0f8;"></i></a>
+                 <a href=""><i class="fa-brands fa-twitter" style="color: #0dd0f8;"></i></a>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Registration Form</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- (Optional) Use CSS or JS implementation -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/js/all.min.js"
+        integrity="sha512-naukR7I+Nk6gp7p5TMA4ycgfxaZBJ7MO5iC3Fp6ySQyKFHOGfpkSZkYVWV5R7u7cfAicxanwYQ5D1e17EfJcMA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style>
+        .container-fluid {
+            /* background-color: rgba(227, 200, 117, 0.841); */
+            background-image: url(/static/images/backgraound.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        span {
+            color: rgb(7, 253, 68);
+        }
+
+         h3 {
+            color: red;
+            filter: invert();
+            /* margin-right: 2rem;*/ 
+            
+        } 
+
+        p {
+            color: rgb(250, 120, 5);
+            font-size: 1rem;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .text-white {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="d-flex justify-content-center">
+            <img src="/static/images/logo.png" alt="" style="height: 80px; width: 80px; filter: invert()">
+        </div>
+        <div class="d-grid justify-content-center text-white">
+            <h2><span>Welcome</span> To Our Rantter Website</h2>
+        </div>
+        <div class=" d-flex justify-content-center">
+            <div class="row ">
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="text" name="Name" id="Name" placeholder="First Name" required maxlength="20"
+                            size="25" pattern="[A-Za-z0-9]+">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <!-- <div class=" pt-2"></div> -->
+                    <input type="text" name="Name" id="Name" placeholder="Last Name" required maxlength="20" size="25"
+                        pattern="[A-Za-z0-9]+">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <form method="post" enctype="multipart/form-data">
+                        <input type="text" name="Father" id="Father" placeholder="Father Name" required maxlength="20"
+                            size="25" pattern="[A-Za-z0-9]+">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="email" name="email" id="email" placeholder="Email@..." size="25">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="tel" name="phone" id="phone" placeholder="Phone no..." pattern="0-9" maxlength="13"
+                        size="25">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="text" name="Aadhaar" id="Aadhaar" placeholder="Aadhaar no..." pattern="0-9"
+                        maxlength="12" size="25">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="text" name="Address" id="Address" placeholder="Address..." size="25">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="text" name="state" id="state" placeholder="State..." size="25">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="text" name="city" id="city" placeholder="City..." size="25">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="date" name="dob" id="dob">
+                </div>
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <input type="datetime-local" name="admissiondate" id="admitdate">
+                </div>
+                <!-- <div class="col-6 col-l-6 d-flex justify-content-center pt-2">
+                    <input type="file" name="avatar" id="avatar">
+                </div> -->
+                <div class="col-6 col-l-6 d-flex justify-content-center pt-3">
+                    <div class="text-white">
+                        <input type="checkbox" name="agree" id="agree">Do you agree with our turms and conditions?
+                    </div>
+                </div>
+                <div class="col d-flex justify-content-center pt-4">
+                    <a name="" id="" class="btn btn-outline-light btn-lg px-4" href="#" role="button">Submit</a>
+                </div>
+                <!-- <div class="d-grid justify-content-end text-white pt-2">
+                    <h4><span>Welcome</span> Our Rantter Website</h4>
+                </div> -->
+                <div class="d-grid justify-content-end text-white ">
+                    <h3> <img src="/static/images/logo.png" alt="" style="height: 35px; width: 35px;">Saurabh Pathak</h3>
+                </div>
+                <div class="d-grid justify-content-end">
+                    <p><i class="fa fa-phone"></i>Mobail no : 8874681006</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
